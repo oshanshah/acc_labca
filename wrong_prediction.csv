@@ -1,0 +1,8 @@
+,Accurate forecast,Under-predict (-30%),Over-predict (+40%),Reactive (no ML)
+avg_util_pct,57.87,61.9,36.1,63.17
+avg_latency_ms,146.85,164.82,87.24,180.0
+p95_latency_ms,156.1,193.09,85.13,203.75
+sla_violation_pct,0.5,0.63,0.17,1.16
+vm_hours,342.87,322.28,549.9,314.27
+cost_usd,17.14,16.11,27.5,15.71
+energy_kwh,54.33,52.26,75.08,51.46

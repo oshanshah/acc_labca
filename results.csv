@@ -1,0 +1,8 @@
+,Reactive,ML-based
+avg_util_pct,63.17,57.87
+avg_latency_ms,180.0,146.85
+p95_latency_ms,203.75,156.1
+sla_violation_pct,1.16,0.5
+vm_hours,314.27,342.87
+cost_usd,15.71,17.14
+energy_kwh,51.46,54.33

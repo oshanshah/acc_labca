@@ -1,0 +1,36 @@
+=== 1. Generating workload ===
+=== 2. Feature engineering ===
+Features: ['load', 'lag1', 'lag5', 'lag10', 'lag15', 'lag30', 'rm10', 'rs10', 'd1', 'hs', 'hc']
+Train rows: 7028 Test rows: 3012
+
+=== 3. Forecaster (Random Forest, 10-min horizon) ===
+MAE=31.5  RMSE=86.8  MAPE=8.8%  | Naive baseline MAE=37.0
+
+=== 4. Anomaly detector (Isolation Forest) ===
+Anomalies flagged in test period: 78 of 3012 minutes
+
+=== 5. Auto-scaling simulation: Reactive vs ML-based ===
+                    Reactive  ML-based
+avg_util_pct            63.17     57.87
+avg_latency_ms         180.00    146.85
+p95_latency_ms         203.75    156.10
+sla_violation_pct        1.16      0.50
+vm_hours                314.27    342.87
+cost_usd                 15.71     17.14
+energy_kwh               51.46     54.33
+
+=== 6. Graphs ===
+
+=== 7. What if the prediction is wrong? ===
+                    Accurate forecast ...  Reactive (no ML)
+avg_util_pct                   57.87 ...             63.17
+avg_latency_ms                146.85 ...            180.00
+p95_latency_ms                156.10 ...            203.75
+sla_violation_pct               0.50 ...              1.16
+vm_hours                       342.87 ...            314.27
+cost_usd                        17.14 ...             15.71
+energy_kwh                      54.33 ...             51.46
+
+[7 rows x 4 columns]
+
+DONE. Files: fig1_workload.png fig2_results.png fig3_zoom.png results.csv wrong_prediction.csv
